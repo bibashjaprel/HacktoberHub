@@ -1,6 +1,11 @@
 
 # HacktoberHub: Automation Scripts for Hacktoberfest 2024 🎉
 
+
+[![HactoberHub](https://img.shields.io/static/v1?label=bibashjaprel&message=HactoberHub&color=red&logo=github)](https://github.com/bibashjaprel/HacktoberHub "Go to GitHub repo")
+[![stars - HactoberHub](https://img.shields.io/github/stars/bibashjaprel/HacktoberHub?style=social)](https://github.com/bibashjaprel/HacktoberHub)
+[![forks - HactoberHub](https://img.shields.io/github/forks/bibashjaprel/HacktoberHub?style=social)](https://github.com/bibashjaprel/HacktoberHub)
+---
 Welcome to **HacktoberHub**, a collection of simple and useful automation scripts to help developers with various tasks. This repository is part of **Hacktoberfest 2024** and is open for contributions from everyone!
 
 We accept scripts in **any programming language** that automate small tasks. This is a beginner-friendly repository aimed at helping new developers participate in open-source. Whether you're a seasoned developer or just starting out, there's something here for you.
