@@ -37,7 +37,7 @@ We accept scripts in **any programming language** that automate small tasks. Thi
    ```
 7. **Submit a Pull Request**: Go to your forked repo on GitHub and click the 'Compare & Pull Request' button. Provide a brief description of what your script does.
 
-## What Scripts Are We Looking For? 🤔 
+## What Scripts Are We Looking For? 🤔
 
 We accept **any type of automation script**. Here are some ideas:
 - Backup file systems
