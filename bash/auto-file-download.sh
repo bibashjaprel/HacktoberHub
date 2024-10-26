@@ -2,9 +2,9 @@
 # A simple bash script to download image files from given url target.
 
 # Location of the URL list
-URL_LIST="/home/sprit/hello/url.txt"
+URL_LIST="/path/to/url.txt"
 # Directory where files will be downloaded
-DOWNLOAD_DIR="/home/sprit/hello"
+DOWNLOAD_DIR="/path/to/destination/dir"
 # Create the download directory if it doesn't exist
 mkdir -p "$DOWNLOAD_DIR"
 # Read each URL from the file and download it
