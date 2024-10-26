@@ -1,4 +1,5 @@
-
+// HTTP security header checker in golang
+// Author: @codedspit <roshan0x01@gmail,com>
 package main
 
 import (
