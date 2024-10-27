@@ -1,0 +1,28 @@
+name: Daily Green Commit
+
+on:
+  schedule:
+    - cron: '12 12 * * *'  # Runs daily at 18:00 Nepal Time
+jobs:
+  green_commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install PyGithub
+
+      - name: Run Greenify Script
+        env:
+          api_key: ${{ secrets.API_KEY }}  # GitHub Personal Access Token stored as a secret
+        run: |
+          python greenify.py
