@@ -1,4 +1,22 @@
-# Simple To-Do List Manager
+# To-Do List Manager with File Handling
+
+import os
+
+FILENAME = "tasks.txt"
+
+def load_tasks():
+    tasks = []
+    if os.path.exists(FILENAME):
+        with open(FILENAME, "r") as file:
+            for line in file:
+                task, status = line.strip().rsplit(",", 1)
+                tasks.append((task, status == "True"))
+    return tasks
+
+def save_tasks(tasks):
+    with open(FILENAME, "w") as file:
+        for task, status in tasks:
+            file.write(f"{task},{status}\n")
 
 def show_menu():
     print("\n--- To-Do List Menu ---")
@@ -19,6 +37,7 @@ def view_tasks(tasks):
 def add_task(tasks):
     task = input("Enter a new task: ")
     tasks.append((task, False))
+    save_tasks(tasks)
     print(f"Added task: {task}")
 
 def delete_task(tasks):
@@ -26,6 +45,7 @@ def delete_task(tasks):
     try:
         task_num = int(input("Enter the task number to delete: ")) - 1
         removed_task = tasks.pop(task_num)
+        save_tasks(tasks)
         print(f"Removed task: {removed_task[0]}")
     except (IndexError, ValueError):
         print("Invalid task number.")
@@ -36,12 +56,13 @@ def mark_task_done(tasks):
         task_num = int(input("Enter the task number to mark as done: ")) - 1
         task, _ = tasks[task_num]
         tasks[task_num] = (task, True)
+        save_tasks(tasks)
         print(f"Marked task as done: {task}")
     except (IndexError, ValueError):
         print("Invalid task number.")
 
 def main():
-    tasks = []
+    tasks = load_tasks()
     while True:
         show_menu()
         choice = input("Choose an option: ")
